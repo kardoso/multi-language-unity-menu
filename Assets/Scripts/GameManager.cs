@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
@@ -24,7 +23,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     //Load a scene
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        FindObjectOfType<TransitionManager>().LoadScene(sceneName);
     }
 
     //Set path of the file with the sentences

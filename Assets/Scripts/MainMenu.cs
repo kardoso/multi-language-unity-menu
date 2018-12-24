@@ -62,8 +62,9 @@ public class MainMenu : Menu {
 				pressed = false;
                 break;
             case 3:
-                Debug.Log("Quit Game");
-				pressed = false;
+				//Here should be the code to quit actually
+				//But i'll go back to language selection menu
+                gm.LoadScene("LanguageSelection");
                 break;
         }
 	}
