@@ -30,6 +30,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }
 
     //Get sentence from file
+    //the names of the sentences are defined in the xml file
     public string GetSentence(string sentenceName){
         return langReader.getString(sentenceName);
     }
