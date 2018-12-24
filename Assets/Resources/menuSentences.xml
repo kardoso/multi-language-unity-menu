@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<languages>
+	<Portuguese>
+		<string name="on">Habilitado</string>
+		<string name="off">Desabilitado</string>
+		<string name="exit">Sair</string>
+		<string name="start_new">Novo jogo</string>
+		<string name="load">Carregar</string>
+		<string name="continue">Continuar</string>
+		<string name="reload">Recarregar</string>
+		<string name="main_menu">Menu principal</string>
+		<string name="settings">Configurações</string>
+		<string name="cancel">Cancelar</string>
+		<string name="confirm">Confirmar</string>
+		<string name="try_again">Tentar novamente</string>
+		<string name="full_screen">Tela cheia</string>
+		<string name="windowned">Janela</string>
+		<string name="bgm_volume">Música de fundo</string>
+		<string name="fx_volume">Efeitos sonoros</string>
+		<string name="v_sync">Sincronização vertical</string>
+		<string name="screen_mode">Modo de tela</string>
+		<string name="resolution">Resolução</string>
+		<string name="input_method">Método de entrada</string>
+		<string name="show_tips">Mostrar dicas</string>
+		<string name="keyboard">Teclado</string>
+		<string name="joystick">Joystick</string>
+		<string name="confirm_new_game">Se um novo jogo for iniciado o progresso já salvo será perdido.
+
+Você tem certeza de que deseja iniciar um novo jogo?</string>
+	</Portuguese>
+
+	<Spanish>
+		<string name="on">Habilitado</string>
+		<string name="off">Deshabilitado</string>
+		<string name="exit">Salir</string>
+		<string name="start_new">Nuevo juego</string>
+		<string name="load">Cargar</string>
+		<string name="continue">Continuar</string>
+		<string name="reload">Recargar</string>
+		<string name="main_menu">Menú principal</string>
+		<string name="settings">Configuraciones</string>
+		<string name="cancel">Cancelar</string>
+		<string name="confirm">Confirmar</string>
+		<string name="try_again">Reintentar</string>
+		<string name="full_screen">Pantalla completa</string>
+		<string name="windowned">Ventana</string>
+		<string name="bgm_volume">Música de fondo</string>
+		<string name="fx_volume">Efectos sonoros</string>
+		<string name="v_sync">Sincronización vertical</string>
+		<string name="screen_mode">Modo de pantalla</string>
+		<string name="resolution">Resolución</string>
+		<string name="input_method">Método de entrada</string>
+		<string name="show_tips">Mostrar sugerencias</string>
+		<string name="keyboard">Teclado</string>
+		<string name="joystick">Joystick</string>
+		<string name="confirm_new_game">Si se inicia un nuevo juego, se pierde el progreso ya guardado.
+
+¿Está seguro de que desea iniciar un nuevo juego?</string>
+	</Spanish>
+
+	<English>
+		<string name="on">On</string>
+		<string name="off">Off</string>
+		<string name="exit">Quit game</string>
+		<string name="start_new">New game</string>
+		<string name="load">Load</string>
+		<string name="continue">Continue</string>
+		<string name="reload">Reload</string>
+		<string name="main_menu">Main menu</string>
+		<string name="settings">Settings</string>
+		<string name="cancel">Cancel</string>
+		<string name="confirm">Confirm</string>
+		<string name="try_again">Try again</string>
+		<string name="full_screen">Full Screen</string>
+		<string name="windowned">Windowned</string>
+		<string name="bgm_volume">BGM Sound Volume</string>
+		<string name="fx_volume">FX Sound Volume</string>
+		<string name="v_sync">VSync</string>
+		<string name="screen_mode">Screen mode</string>
+		<string name="resolution">Resolution</string>
+		<string name="input_method">Input method</string>
+		<string name="show_tips">Show tips</string>
+		<string name="keyboard">Keyboard</string>
+		<string name="joystick">Joystick</string>
+		<string name="confirm_new_game">If you start a new game the existing save will be deleted.
+
+Are you sure you want to start a new game?</string>
+	</English>
+
+	<Japanese>
+		<string name="on">有効</string>
+		<string name="off">無効</string>
+		<string name="exit">終了</string>
+		<string name="start_new">スタート</string>
+		<string name="load">ロード</string>
+		<string name="continue">ゲームを続ける</string>
+		<string name="reload">リロード</string>
+		<string name="main_menu">タイル画面に戻る</string>
+		<string name="settings">設定</string>
+		<string name="cancel">キャンセル</string>
+		<string name="confirm">決定</string>
+		<string name="try_again">リトライ</string>
+		<string name="full_screen">フルスクリーンにする</string>
+		<string name="windowned">ウィンドウモード</string>
+		<string name="bgm_volume">バックグラウンドミュージックの音量</string>
+		<string name="fx_volume">効果音の音量</string>
+		<string name="v_sync">垂直同期</string>
+		<string name="screen_mode">スクリーンモード</string>
+		<string name="resolution">解決</string>
+		<string name="input_method">入力方式</string>
+		<string name="show_tips">ヒントを表示する</string>
+		<string name="keyboard">キーボード</string>
+		<string name="joystick">ジョイスティック</string>
+		<string name="confirm_new_game">新しいゲームが開始された場合、既に保存された進捗状況は失われます。
+
+新しいゲームを開始してもよろしいですか？</string>
+	</Japanese>
+
+	<German>
+		<string name="on">Aktiviert</string>
+		<string name="off">Deaktiviert</string>
+		<string name="exit">Verlassen</string>
+		<string name="start_new">Neues spiel</string>
+		<string name="load">Laden</string>
+		<string name="continue">Fortsetzen</string>
+		<string name="reload">Neu laden</string>
+		<string name="main_menu">Hauptmenü</string>
+		<string name="settings">Einstellungen</string>
+		<string name="cancel">Stornieren</string>
+		<string name="confirm">Bestätigen</string>
+		<string name="try_again">Versuchen Sie es erneut</string>
+		<string name="full_screen">Vollbild</string>
+		<string name="windowned">Fenstermodus</string>
+		<string name="bgm_volume">Hintergrundmusik</string>
+		<string name="fx_volume">Soundeffekte</string>
+		<string name="v_sync">Vertikale Synchronisation</string>
+		<string name="screen_mode">Bildschirmmodus</string>
+		<string name="resolution">Bildschirmauflösung</string>
+		<string name="input_method">Eingabe Methode</string>
+		<string name="show_tips">Zeige Tipps</string>
+		<string name="keyboard">Tastatur</string>
+		<string name="joystick">Joystick</string>
+		<string name="confirm_new_game">Wenn ein neues Spiel gestartet wird, geht der gespeicherte Fortschritt verloren.
+
+Möchtest du wirklich ein neues Spiel starten?</string>
+	</German>
+</languages>
