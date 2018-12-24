@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : SingletonMonoBehaviour<GameManager>
 {
 	//Game language
     Language language;
+
+	protected override void Awake()
+    {
+        base.isDontDestroy = true;
+        base.Awake();
+    }
 
 	//Load a scene
     public void LoadScene(string sceneName) { }
