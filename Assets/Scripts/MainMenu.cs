@@ -17,6 +17,8 @@ public class MainMenu : Menu {
     {
         base.Start();
         gm = FindObjectOfType<GameManager>();
+		//It will set the text for the options
+		DefineOptionsSenteces();
     }
 
 	//If an option is selected will change color and show arrow
