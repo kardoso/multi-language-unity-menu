@@ -14,7 +14,7 @@ using System.Xml;
 
 using UnityEngine;
 
-public class LanguageManager
+public class LanguageReader
 {
     private Hashtable Strings;
  
@@ -34,7 +34,7 @@ public class LanguageManager
      
     var LangClass : Lang = new Lang(wwwXML.text, currentLang, true)
     */
-    public LanguageManager ( string path, string language, bool web) {
+    public LanguageReader ( string path, string language, bool web) {
         if (!web) {
             setLanguage(path, language);
         } else {

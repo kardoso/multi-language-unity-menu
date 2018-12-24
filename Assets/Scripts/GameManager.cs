@@ -6,9 +6,9 @@ using System.IO;
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     //THE language manager
-    LanguageManager languageManager;
+    LanguageReader langReader;
 	//Game language
-    Language language = Language.English;
+    Language lang = Language.English;
     //path of the file that the game is reading from
     string langFilePath = "Resources/menuSentences.xml";
 
@@ -17,7 +17,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         base.isDontDestroy = true;
         base.Awake();
         //Initialize and set a default language
-        languageManager = new LanguageManager(Path.Combine(Application.dataPath, langFilePath), language.Value, false);
+        langReader = new LanguageReader(Path.Combine(Application.dataPath, langFilePath), lang.Value, false);
     }
 
 	//Load a scene
@@ -25,25 +25,25 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     //Set path of the file with the sentences
     public void SetLanguageFile(string filePath){
-        languageManager.setLanguage(Path.Combine(Application.dataPath, filePath), language.Value);
+        langReader.setLanguage(Path.Combine(Application.dataPath, filePath), lang.Value);
         langFilePath = filePath;
     }
 
     //Get sentence from file
     public string GetSentence(string sentenceName){
-        return languageManager.getString(sentenceName);
+        return langReader.getString(sentenceName);
     }
 
 	//Set game language
     public void SetLanguage(Language _language)
     {
-        languageManager.setLanguage(Path.Combine(Application.dataPath, langFilePath), _language.Value);
-        language = _language;
+        langReader.setLanguage(Path.Combine(Application.dataPath, langFilePath), _language.Value);
+        lang = _language;
     }
 
 	//Get game language
     public Language GetLanguage()
     {
-        return language;
+        return lang;
     }
 }
