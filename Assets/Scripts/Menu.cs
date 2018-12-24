@@ -12,6 +12,7 @@ public abstract class Menu : MonoBehaviour
     //Submit button name
     [SerializeField]
     protected string submitButton;
+    //Options availables to choose
     [SerializeField]
     protected GameObject[] availableOptions;
     //The option that is selected

@@ -13,7 +13,6 @@ public class LanguageMenu : Menu
     //Color of the word if the option is not selected
     [SerializeField]
     protected Color optionNotSelected;
-    //Options availables to choose
 
     protected override void Start()
     {
