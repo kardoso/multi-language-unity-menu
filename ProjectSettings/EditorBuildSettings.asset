@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LanguageSelection.unity
+    guid: 7d7d962e5f54e4ee6a3efcfec5b852a9
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f7b5a4b85ca57413dbef02ea4e36fafd
