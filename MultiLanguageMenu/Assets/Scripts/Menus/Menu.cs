@@ -14,7 +14,7 @@ public abstract class Menu : MonoBehaviour
     protected string submitButton;
     //Options availables to choose
     [SerializeField]
-    protected GameObject[] availableOptions;
+    protected List<GameObject> availableOptions;
     //The option that is selected
     protected int currentOption;
     //If the submit button was pressed
@@ -23,7 +23,7 @@ public abstract class Menu : MonoBehaviour
     private float inptVel;
     //Color of the word if the option is selected
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         currentOption = 0;
         pressed = false;
@@ -41,7 +41,7 @@ public abstract class Menu : MonoBehaviour
     //depending on whether or not the option is currently selected
     private void SelectedBehaviour()
     {
-        for (int i = 0; i < availableOptions.Length; i++)
+        for (int i = 0; i < availableOptions.Count; i++)
         {
             if (availableOptions[i] == availableOptions[currentOption])
             {
@@ -73,10 +73,15 @@ public abstract class Menu : MonoBehaviour
     protected abstract void OnSubmit();
 
     //This allows to change the current available options
-    protected IEnumerator SetNewOptions(GameObject[] options)
+    protected void SetNewOptions(List<GameObject> newOptions)
     {
-        // Not developed yet.
-        throw new NotImplementedException();
+        for(int i = availableOptions.Count -1; i >= 0; i--){
+            availableOptions.RemoveAt(i);
+        }
+        for(int i = 0; i < newOptions.Count; i++){
+            availableOptions.Add(newOptions[i]);
+        }
+        pressed= false;
     }
 
     //Get input and run the functions
@@ -101,7 +106,7 @@ public abstract class Menu : MonoBehaviour
     {
         if (currentOption == 0)
         {
-            currentOption = availableOptions.Length - 1;
+            currentOption = availableOptions.Count - 1;
         }
         else
         {
@@ -112,7 +117,7 @@ public abstract class Menu : MonoBehaviour
     //select next option available
     void NextOption()
     {
-        if (currentOption == availableOptions.Length - 1)
+        if (currentOption == availableOptions.Count - 1)
         {
             currentOption = 0;
         }

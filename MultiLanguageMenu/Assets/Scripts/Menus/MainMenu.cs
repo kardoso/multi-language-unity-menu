@@ -5,20 +5,27 @@ using UnityEngine.UI;
 
 public class MainMenu : Menu {
 
+    bool isMain; //if current options are from main menu
+    public List<GameObject> mainOptions;    //Main menu options
+    public List<GameObject> settingsOptions;//Settings options
+    public GameObject settingsObject; //Settings gameObject
 	//Game Manager will save the language choice
     private GameManager gm;
+    [SerializeField]
+    private string nextScene;
     [SerializeField]
     protected Color optionSelected;
     //Color of the word if the option is not selected
     [SerializeField]
     protected Color optionNotSelected;
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
         gm = FindObjectOfType<GameManager>();
 		//It will set the text for the options
 		DefineOptionsSenteces();
+        settingsObject.SetActive(false);
+        isMain = true;
     }
 
 	//If an option is selected will change color and show arrow
@@ -45,27 +52,39 @@ public class MainMenu : Menu {
 	*/
     protected override void OnSubmit()
     {
-        switch (currentOption)
-        {
-			//Since I don't have another scene do load
-			//I just set pressed to false to not freeze the menu
-            case 0:
-                Debug.Log("Start Game");
-				pressed = false;
-                break;
-            case 1:
-                Debug.Log("Load Game");
-				pressed = false;
-                break;
-            case 2:
-                Debug.Log("Settings");
-				pressed = false;
-                break;
-            case 3:
-				//Here should be the code to quit actually
-				//But i'll go back to language selection menu
-                gm.LoadScene("LanguageSelection");
-                break;
+        if(isMain){
+            switch (currentOption)
+            {
+                //Since I don't have another scene do load
+                //I just set pressed to false to not freeze the menu
+                case 0:
+                    Debug.Log("Start Game");
+                    pressed = false;
+                    break;
+                case 1:
+                    Debug.Log("Load Game");
+                    pressed = false;
+                    break;
+                case 2:
+                    Debug.Log("Settings");
+                    SetNewOptions(settingsOptions); //change available options
+                    settingsObject.SetActive(true); //enable settings game object
+                    currentOption = 0;  //set current option to 0
+                    isMain = false;     //not the main options now
+                    break;
+                case 3:
+                    //Here should be the code to quit actually
+                    //But i'll go back to language selection menu
+                    gm.LoadScene(nextScene);
+                    break;
+            }
+        }
+        else{
+            Debug.Log(currentOption);
+            SetNewOptions(mainOptions); //change available options
+            settingsObject.SetActive(false);    //disable setting game object
+            currentOption = 2;  //settingsObject current option to 2
+            isMain = true;      //main options
         }
 	}
 

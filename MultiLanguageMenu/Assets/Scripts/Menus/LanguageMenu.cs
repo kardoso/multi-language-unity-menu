@@ -14,9 +14,8 @@ public class LanguageMenu : Menu
     [SerializeField]
     protected Color optionNotSelected;
 
-    protected override void Start()
+    protected void Start()
     {
-        base.Start();
         gm = FindObjectOfType<GameManager>();
     }
 
