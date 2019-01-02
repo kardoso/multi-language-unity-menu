@@ -4,7 +4,7 @@ public class Language
 {
     private Language(string value) { Value = value; }
 
-    public string Value { get; private set;}
+    public string Value { get; private set; }
 
     public static Language Portuguese { get { return new Language("Portuguese"); } }
     public static Language Spanish { get { return new Language("Spanish"); } }

@@ -24,12 +24,17 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
     protected virtual void Awake()
     {
         if (CheckInstance() && isDontDestroy)
+        {
             DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     protected bool CheckInstance()
     {
-        if (this == Instance) { return true; }
+        if (this == Instance)
+        {
+            return true;
+        }
         Destroy(this);
         return false;
     }

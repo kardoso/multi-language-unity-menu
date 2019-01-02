@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MainMenu : Menu {
-
+public class MainMenu : Menu
+{
     bool isMain; //if current options are from main menu
     public List<GameObject> mainOptions;    //Main menu options
-    public List<GameObject> settingsOptions;//Settings options
+    public List<GameObject> settingsOptions;    //Settings options
     public GameObject settingsObject; //Settings gameObject
 	//Game Manager will save the language choice
     private GameManager gm;
@@ -33,7 +33,6 @@ public class MainMenu : Menu {
     {
         gameObj.transform.Find("Text").GetComponent<Text>().color = optionSelected;
         gameObj.transform.Find("Arrow").gameObject.SetActive(true);
-
     }
 
 	//If an option is not selected will change color and hide arrow
@@ -52,7 +51,8 @@ public class MainMenu : Menu {
 	*/
     protected override void OnSubmit()
     {
-        if(isMain){
+        if(isMain)
+        {
             switch (currentOption)
             {
                 //Since I don't have another scene do load
@@ -79,7 +79,8 @@ public class MainMenu : Menu {
                     break;
             }
         }
-        else{
+        else
+        {
             Debug.Log(currentOption);
             SetNewOptions(mainOptions); //change available options
             settingsObject.SetActive(false);    //disable setting game object
@@ -90,7 +91,8 @@ public class MainMenu : Menu {
 
 	//Load sentences to options text
 	//the names of the sentences are defined in the xml file
-	private void DefineOptionsSenteces(){
+	private void DefineOptionsSenteces()
+    {
 		availableOptions[0].transform.Find("Text").GetComponent<Text>().text = gm.GetSentence("start_new");
 		availableOptions[1].transform.Find("Text").GetComponent<Text>().text = gm.GetSentence("load");
 		availableOptions[2].transform.Find("Text").GetComponent<Text>().text = gm.GetSentence("settings");

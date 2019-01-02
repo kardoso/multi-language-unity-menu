@@ -133,7 +133,6 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
 		Texture2D plainTex = CreateTexture2D();
 		m_transitionSprite = Sprite.Create(plainTex, new Rect(0, 0, 32, 32), Vector2.zero);
 
-
 		m_transitionSprite.name = "TransitionSpeite";
 		m_transImage.sprite = m_transitionSprite;
 		m_transImage.type = Image.Type.Filled;
@@ -142,7 +141,6 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
 		m_transImageFlash.gameObject.name = "FlashImage";
 		m_transImageFlash.sprite = m_transitionSprite;
 		m_transImageFlash.type = Image.Type.Simple;
-
 	}
 
 	void CreateCanvas()
@@ -165,7 +163,6 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
 		m_baseCanvasScaler.referenceResolution = new Vector2(Screen.width, Screen.height);
 		m_baseCanvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.Shrink;
 		m_baseCanvasScaler.referencePixelsPerUnit = 100.0f;
-
 	}
 
 	Image CreateImage()
@@ -296,7 +293,8 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
 			while (Time.time - t < _fadeDuration)
 			{
 				lp = (Time.time - t) / _fadeDuration;
-				m_transImageFlash.color = Color.Lerp(new Color(_flashColor.r, _flashColor.g, _flashColor.b, 0.0f), _flashColor, lp); yield return null;
+				m_transImageFlash.color = Color.Lerp(new Color(_flashColor.r, _flashColor.g, _flashColor.b, 0.0f), _flashColor, lp);
+				yield return null;
 			}
 
 			m_transImageFlash.color = _flashColor;
@@ -333,7 +331,6 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
 		}
 		return newCurve;
 	}
-
 
 	void SceneTransitionDirection(float _lerp, EffectType _effectType)
 	{
@@ -457,7 +454,6 @@ public class TransitionManager : SingletonMonoBehaviour<TransitionManager>
 		{
 			m_transImage.gameObject.SetActive(true);
 		}
-
 	}
 
 	void SceneTransitionEnd(EffectType _effectType)

@@ -34,10 +34,14 @@ public class LanguageReader
      
     var LangClass : Lang = new Lang(wwwXML.text, currentLang, true)
     */
-    public LanguageReader ( string path, string language, bool web) {
-        if (!web) {
+    public LanguageReader ( string path, string language, bool web)
+    {
+        if (!web)
+        {
             setLanguage(path, language);
-        } else {
+        }
+        else
+        {
             setLanguageWeb(path, language);
         }
     }
@@ -52,19 +56,24 @@ public class LanguageReader
     If the XML resource is stored on the web rather than on the local system use the
     setLanguageWeb function
     */
-    public void setLanguage ( string path, string language) {
+    public void setLanguage ( string path, string language)
+    {
         var xml = new XmlDocument();
         xml.Load(path);
      
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];
-        if (element != null) {
+        if (element != null)
+        {
             var elemEnum = element.GetEnumerator();
-            while (elemEnum.MoveNext()) {
+            while (elemEnum.MoveNext())
+            {
                 var xmlItem = (XmlElement)elemEnum.Current;
                 Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
             }
-        } else {
+        }
+        else
+        {
             Debug.LogError("The specified language does not exist: " + language);
         }
     }
@@ -82,19 +91,24 @@ public class LanguageReader
      
     var LangClass : Lang = new Lang(wwwXML.text, currentLang)
     */
-    public void setLanguageWeb ( string xmlText, string language) {
+    public void setLanguageWeb ( string xmlText, string language)
+    {
         var xml = new XmlDocument();
         xml.Load(new StringReader(xmlText));
      
         Strings = new Hashtable();
         var element = xml.DocumentElement[language];
-        if (element != null) {
+        if (element != null)
+        {
             var elemEnum = element.GetEnumerator();
-            while (elemEnum.MoveNext()) {
+            while (elemEnum.MoveNext())
+            {
                 var xmlItem = (XmlElement)elemEnum.Current;
                 Strings.Add(xmlItem.GetAttribute("name"), xmlItem.InnerText);
             }
-        } else {
+        }
+        else
+        {
             Debug.LogError("The specified language does not exist: " + language);
         }
     }
@@ -119,8 +133,10 @@ public class LanguageReader
     JavaScript:
     var appName : String = langClass.getString("app_name");
     */
-    public string getString (string name) {
-        if (!Strings.ContainsKey(name)) {
+    public string getString (string name)
+    {
+        if (!Strings.ContainsKey(name))
+        {
             Debug.LogError("The specified string does not exist: " + name);
          
             return "";
@@ -128,5 +144,4 @@ public class LanguageReader
  
         return (string)Strings[name];
     }
- 
 }

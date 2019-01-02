@@ -24,7 +24,6 @@ public class LanguageMenu : Menu
     {
         gameObj.transform.Find("Text").GetComponent<Text>().color = optionSelected;
         gameObj.transform.Find("Flag").gameObject.SetActive(true);
-
     }
 
 	//If an option is not selected will change color and hide flag

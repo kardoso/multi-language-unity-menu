@@ -75,10 +75,12 @@ public abstract class Menu : MonoBehaviour
     //This allows to change the current available options
     protected void SetNewOptions(List<GameObject> newOptions)
     {
-        for(int i = availableOptions.Count -1; i >= 0; i--){
+        for(int i = availableOptions.Count -1; i >= 0; i--)
+        {
             availableOptions.RemoveAt(i);
         }
-        for(int i = 0; i < newOptions.Count; i++){
+        for(int i = 0; i < newOptions.Count; i++)
+        {
             availableOptions.Add(newOptions[i]);
         }
         pressed= false;
